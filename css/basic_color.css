@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* 테마 색상 정의 */
+  :root {
+
+    --bodyBg-color:#fff; /* body 배경컬러 */
+    --whiteBg-color:#fff; /*화이트 배경 컬러 */
+    --whiteFont-color:#fff;/*화이트 폰트 컬러 */
+    --blackBgFont-color:#000;/*검정배경 폰트 컬러 */
+    --sideMenuBg-color:#fff;/*사이드메뉴 배경 컬러*/
+    --thumBg-color:#fff;/*썸네일 컬러*/
+
+    --main-color: #0F43A8; /* main 컬러 */
+    --sub-color: #0395CD; /* sub 컬러 */
+    --outline-color: #747474; /* input, select, radio, check, textarea 등등 박스 외곽라인 컬러 */
+    --disableBg-color: #E2E2E2; /* input, select, radio, check, textarea 등등 disable 배경 컬러 */
+
+    --Fmain-color: #000000; /* 폰트 메인 컬러 */
+    --Fwarning-color: #e52900; /* 폰트 경고 컬러 */
+    --Fdisable-color: #6d6d6d; /* 폰트 비활성화 컬러 */
+    --Ftable-color: #000000;
+
+    --Toutline-color: #C0C4D7; /* 테이블 outline 컬러 */
+    --TtitleBg-color: #E4EFFA; /* 테이블 타이틀 배경 컬러 */
+    --TtitleBgF-color: #d0edff; /* 테이블 필수 타이틀 배경 컬러 */
+    --TlistBg1-color: #F3F4F8; /* 테이블 리스트 교차 배경 컬러 1 */
+    --TlistBg2-color: #ffffff; /* 테이블 리스트 교차 배경 컬러 2 */
+    --TselectBg-color: #D4EBFF; /* 테이블 선택 배경 컬러 */
+    --TableBg-color: #fff; /* 테이블 기본 배경 */
+
+    --Bnor-color: #0F43A8; /* 버튼 기본 컬러 */
+    --Bpoint-color: #0F43A8; /* 버튼 포인트 컬러 */
+    --Bfunction-color: #468316; /* 버튼 기능 컬러 */
+    --Bdel-color: #AB2B2B; /* 버튼 삭제 컬러 */
+    --Bcancel-color: #666666; /* 버튼 취소 컬러 */
+    --Bdisable-color: #BBBBBB; /* 버튼 비활성화 컬러 */
+    --Bnordim-color: #7FA4EC; /* 버튼 기본 비활성화 컬러 */
+    --Bpointdim-color: #86A0D3; /* 버튼 포인트 비활성화 컬러 */
+    --Bfunctiondim-color: #A2C08A; /* 버튼 기능 비활성화 컬러 */
+    --Bdeldim-color: #D59494; /* 버튼 삭제 비활성화 컬러 */
+
+    --Tabnor-color: #6e758c; /* Tab 기본 배경 컬러 */
+    
+    --oh-modal-title-padding:10px;/*모달 타이틀패딩*/
+	  --oh-normal-fontSize:14px;/*기본폰트사이즈*/
+    --loginTime-color:#0F43A8; /* 사이드메뉴 하단 로그인 시간*/
+    --mainDark-color:#0F43A8; /* 메인컬러인데 다크배경일시*/
+  }
+
+  :root[data-theme="dark"]{
+
+    --bodyBg-color:#141415; /* body 배경컬러 */
+    --whiteBg-color:#141415; /*화이트 배경 컬러 */
+    --whiteFont-color:#fff; /*화이트 폰트 컬러 */
+    --blackBgFont-color:#adb5bd;/*검정배경 폰트 컬러 */
+    --sideMenuBg-color:#1e1e1f; /*사이드메뉴 배경 컬러*/
+    --thumBg-color:#28282a; /*썸네일 컬러*/
+
+    --sbgreedBg-color:#1e1e1f;
+
+    --main-color: #1f3d5b; /* main 컬러 */
+    --sub-color: #12C0CF; /* sub 컬러 */
+    --outline-color: #535050; /* input, select, radio, check, textarea 등등 박스 외곽라인 컬러 */
+    --disableBg-color: #E2E2E2; /* input, select, radio, check, textarea 등등 disable 배경 컬러 */
+
+    --Fmain-color: #adb5bd; /* 폰트 메인 컬러 */
+    --Fwarning-color: #e52900; /* 폰트 경고 컬러 */
+    --Fdisable-color: #6d6d6d; /* 폰트 비활성화 컬러 */
+    --Ftable-color: #000000;
+
+    --Toutline-color: #4b5058; /* 테이블 outline 컬러 */
+    --TtitleBg-color: #6799cb; /* 테이블 타이틀 배경 컬러 */
+    --TtitleBgF-color: #d0edff; /* 테이블 필수 타이틀 배경 컬러 */
+    --TlistBg1-color: #F3F4F8; /* 테이블 리스트 교차 배경 컬러 1 */
+    --TlistBg2-color: #ffffff; /* 테이블 리스트 교차 배경 컬러 2 */
+    --TselectBg-color: #4b5058; /* 테이블 선택 배경 컬러 */
+    --TableBg-color: #1e1e1f; /* 테이블 기본 배경 */
+
+
+    --Bnor-color: #0F43A8; /* 버튼 기본 컬러 */
+    --Bpoint-color: #0F43A8; /* 버튼 포인트 컬러 */
+    --Bfunction-color: #468316; /* 버튼 기능 컬러 */
+    --Bdel-color: #AB2B2B; /* 버튼 삭제 컬러 */
+    --Bcancel-color: #666666; /* 버튼 취소 컬러 */
+    --Bdisable-color: #BBBBBB; /* 버튼 비활성화 컬러 */
+    --Bnordim-color: #7FA4EC; /* 버튼 기본 비활성화 컬러 */
+    --Bpointdim-color: #86A0D3; /* 버튼 포인트 비활성화 컬러 */
+    --Bfunctiondim-color: #A2C08A; /* 버튼 기능 비활성화 컬러 */
+    --Bdeldim-color: #D59494; /* 버튼 삭제 비활성화 컬러 */
+
+    --Tabnor-color: #6e758c; /* Tab 기본 배경 컬러 */
+    
+    --oh-modal-title-padding:10px;/*모달 타이틀패딩*/
+	  --oh-normal-fontSize:14px;/*기본폰트사이즈*/
+    --loginText-color:#85add5; /* 사이드메뉴 하단 로그인 시간*/
+    --mainDark-color:#85add5; /* 메인컬러인데 다크배경일시*/
+
+  }

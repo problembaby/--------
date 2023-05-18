@@ -1,0 +1,55 @@
+/*
+tooltip css
+
+사용법:
+<a class="tooltip">툴팁보기
+    <span class="normal">툴팁내용</span>
+  </a>
+
+*/
+
+.tooltip {
+  cursor: help;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+}
+.tooltip span {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  border-radius: 5px 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1em;
+  top: 2em;
+  z-index: 99;
+  margin-left: 0;
+  width:100%;
+  min-width: 200px;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tooltip:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.normal{padding: 20px 10px; background-color: rgba(0, 0, 0, 0.8);   color:#fff;}
+
+.tooltip span::after{
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8.5px 0 8.5px;
+  border-color: #333 transparent transparent transparent;
+  position: absolute;
+  top:-7px;
+  left:15%;
+  transform: rotate(180deg);
+}
+
+

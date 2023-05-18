@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>방역통합정보시스템</title>
+
+
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+  
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/basic_style2.css">
+<!--   <link rel="stylesheet" href="./css/main.css"> -->
+  <link rel="stylesheet" href="./css/basic_color.css">
+  <script src="./js/main.js"></script>
+
+  
+          <script id="SBbase" type="text/javascript">
+              var SBpath = "./";
+          </script>
+  
+          <link id="sbgridCss" href="SBGrid/css/SBGrid.css" rel="stylesheet" type="text/css">
+          <link id="sbgridCss_Default" href="SBGrid/css/SBGrid_Default.css" rel="stylesheet" type="text/css">
+          <script id="sbGridLib" src="SBGrid/SBGrid_Lib.js" type="text/javascript"></script>
+          <script src="SBGrid/SBGrid_min.js" type="text/javascript"></script>
+          <script src="data/data.js" type="text/javascript"></script>
+          <script src="common.js" type="text/javascript"></script>
+           <script src="js/sidemenu.js"></script>
+  
+          <script type="text/javascript">
+              var datagrid;
+              var SBGridProperties = {};
+  
+              function createGrid(){
+  
+                  SBGridProperties.parentid = 'SBGridArea';
+                  SBGridProperties.id = 'datagrid';
+                  SBGridProperties.jsonref = 'ct_data.resources';
+                  SBGridProperties.paging = {'type' : 'all' , 'count' : 5 , 'size' : 7};
+  
+                  SBGridProperties.columns = [
+                      {caption : ['학원명'],        ref : 'academy',        width : '150px',    style : 'text-align:center',    type : 'output'},
+                      {caption : ['설립자(성명)'],    ref : 'name',            width : '150px',    style : 'text-align:center',    type : 'input'},
+                      {caption : ['전화번호'],        ref : 'phone',            width : '120px',    style : 'text-align:center',    type : 'input'},
+                      {caption : ['학원주소'],        ref : 'addr',            width : '450px',    style : 'text-align:center',    type : 'textarea'},
+                      {caption : ['교습과정'],        ref : 'curriculum',        width : '100px',    style : 'text-align:center',    type : 'combo', typeinfo :{ ref : 'newComboData', displayui : true, label : 'label', value : 'value'}},
+                      {caption : ['교습과목(반)'],    ref : 'class',            width : '200px',    style : 'text-align:center',    type : 'input'},
+                      {caption : ['정원'],             ref : 'maxstudent',        width : '70px',    style : 'text-align:center',    type : 'input', format : {type:'string', rule:'@ "명"'}},
+                      {caption : ['교습기간'],        ref : 'term',            width : '100px',    style : 'text-align:center',    type : 'input'},
+                      {caption : ['교육시작일'],        ref : 'startday',        width : '100px',    style : 'text-align:center',    type : 'datepicker', typeinfo : {locale : 'ko' , dateformat :'yymmdd'}, format : {type:'date', rule:'yyyy-mm-dd', origin : 'yyyymmdd' }},
+                      {caption : ['총교습시간(분)'],   ref : 'totalminute',        width : '100px',    style : 'text-align:center',    type : 'input'},
+                      {caption : ['교습비'],        ref : 'pay',            width : '100px',    style : 'text-align:center',    type : 'input', format : {type:'number', rule:'#,###'}},
+                      {caption : ['강사수'],        ref : 'teacher',            width : '70px',    style : 'text-align:center',    type : 'input'}
+                  ];
+                  datagrid = _SBGrid.create(SBGridProperties);
+              };
+  
+              function getPagingInfo(){
+                  var info = JSON.stringify(datagrid.getPagingInfo());
+                  alert(info);
+              };
+          </script>
+<body>
+<div id="wrapper" class="wrap_flex">
+  <!--왼쪽 메뉴 start-->
+    <div id="sidebar-wrapper" class="side_menu_area">
+        <div id="side_close_area">
+            <button class="side_close" id="sidebarToggle"></button>
+        </div>
+
+        <div class="side_inner">
+            <div class="side_logo_area mb20"> <img src="images/side_logo.png" alt="방역통합정보시스템 로고" /></div>
+            <div class="menu_select pb13 mb10">
+                <select name="" id="" class="menu_select_style">
+                    <option value="">검역정보관리</option>
+                    <option value="">검역정보관리</option>
+                    <option value="">검역정보관리</option>
+                </select>
+            </div>
+           
+            <div class="menu_list_area" id="side_menu">
+
+
+                <div class="slide_menu">
+                   <div class="step1 active"><a href="#">기안결제관리</a></div>
+                   <div class="step1"><a href="#">기안결제관리2</a></div>
+                   <div class="step1"><a href="#">중점관리지역입국관리</a></div>
+                   <!--1depth-->
+                   <div class="step1 dropmenu" id="menu1"><a href="#">항공검역관리</a></div>
+                   <div class="step2" data-menuId-dep2="menu1"><a href="#" >항공검역일지관리</a></div>
+                   <div class="step2" data-menuId-de2="menu1"><a href="#">승무원승객명부관리</a></div>
+
+                   <!--2depth-->
+                   <div class="step2 dropmenu" data-menuId-dep2="menu1" id="menu1_3"><a href="#">감염병발생지역입국자관리</a></div>
+
+                       <!-- 3depth-->
+                       <div class="step3 dropmenu" id="menu1_3_1" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"><a href="#" >-항공검역일지관리</a></div>
+                             <!-- 4depth-->
+                             <div class="step4 dropmenu" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
+                             data-menuId-dep4="menu1_3_1" id="menu1_3_1_1"><a href="#" >--항공검역일지관리</a></div>
+
+                                    <!-- 5depth-->
+                                    <div class="step5" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
+                                    data-menuId-dep4="menu1_3_1"
+                                    data-menuId-dep5="menu1_3_1_1" ><a href="#" >---항공검역일지관리</a></div>
+                                                    
+    
+
+                   <div class="step2" data-menuId-dep2="menu1" ><a href="#">특별감역입국자관리</a></div>
+                   <div class="step2" data-menuId-dep2="menu1" ><a href="#">격리면제서대상자관리</a></div>
+
+
+                
+
+
+                <div class="step1 dropmenu" id="menu2"><a href="#">항공검역관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#" >항공검역일지관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">승무원승객명부관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">감염병발생지역입국자관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">특별감역입국자관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">격리면제서대상자관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">심사대검역결과관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">유해검역관리</a></div>
+                <div class="step2" data-menuId-dep2="menu2"><a href="#">보건상태신고서관리</a></div>
+             </div>
+
+
+
+<script>
+
+
+$(document).ready(function() {
+  // 1. .step1.dropmenu를 클릭시 toggleClass("show")을 추가하고 .step2에 slideDown("fast")를 적용
+  $(".step1.dropmenu").click(function() {
+  
+  
+    if ($(this).hasClass("show")) {
+      $("div[data-menuId-dep2='" + menuId + "']").slideUp("fast");
+      $(this).removeClass("show");   
+     }else{
+        $(this).toggleClass("show");
+    var menuId = $(this).attr("id");
+    $(".step2[data-menuId-dep2='" + menuId + "']").slideDown("fast");
+      }
+  });
+
+  // 2. .step2.dropmenu를 클릭시 toggleClass("show")을 추가하고 .step3에 slideDown("fast")를 적용
+  $(".step2.dropmenu").click(function() {
+    $(this).toggleClass("show");
+    var menuId = $(this).attr("id");
+    $(".step3[data-menuId-dep3='" + menuId + "']").slideDown("fast");
+    
+    // 추가된 기능: show 클래스가 포함된 경우, 해당 메뉴의 하위 메뉴 모두 슬라이드 다운
+    if ($(this).hasClass("show")) {
+      $("div[data-menuId-dep3='" + menuId + "']").slideUp("fast");
+      $(this).removeClass("show");
+    }
+  });
+
+  // 3. .step3.dropmenu를 클릭시 toggleClass("show")을 추가하고 .step4에 slideDown("fast")를 적용
+  $(".step3.dropmenu").click(function() {
+    $(this).toggleClass("show");
+    var menuId = $(this).attr("id");
+    $(".step4[data-menuId-dep4='" + menuId + "']").slideDown("fast");
+    
+    // 추가된 기능: show 클래스가 포함된 경우, 해당 메뉴의 하위 메뉴 모두 슬라이드 다운
+    if ($(this).hasClass("show")) {
+      $("div[data-menuId-dep4='" + menuId + "']").slideUp("fast");
+      $(this).removeClass("show");    }
+  });
+
+  // 4. .step4.dropmenu를 클릭시 toggleClass("show")을 추가하고 .step5에 slideDown("fast")를 적용
+  $(".step4.dropmenu").click(function() {
+    $(this).toggleClass("show");
+    var menuId = $(this).attr("id");
+    $(".step5[data-menuId-dep5='" + menuId + "']").slideDown("fast");
+    
+    // 추가된 기능: show 클래스가 포함된 경우, 해당 메뉴의 하위 메뉴 모두 슬라이드 다운
+    if ($(this).hasClass("show")) {
+      $("div[data-menuId-dep5='" + menuId + "']").slideUp("fast");
+      $(this).removeClass("show");    }
+  });
+});
+</script>
+
+해당 스크립트를 보고 기능을 추가해서 스크립트를 다시 짜줘
+1. .step1.dropmenu가 show클래스를 포함하고 있을때 클릭시 .step1.dropmenu의 id값과 data-menuId-dep2의 값이 같은 태그들을 모두 .slideUp("fast") 추가해줘 
+2. .step2.dropmenu가 show클래스를 포함하고 있을때 클릭시 .step2.dropmenu의 id값과 data-menuId-dep3의 값이 같은 태그들을 모두 .slideUp("fast") 추가해줘 
+3. .step3.dropmenu가 show클래스를 포함하고 있을때 클릭시 .step3.dropmenu의 id값과 data-menuId-dep4의 값이 같은 태그들을 모두 .slideUp("fast") 추가해줘 
+4. .step4.dropmenu가 show클래스를 포함하고 있을때 클릭시 .step4.dropmenu의 id값과 data-menuId-dep5의 값이 같은 태그들을 모두 .slideUp("fast") 추가해줘 
+        
+
+            </div>
+
+            <div class="side_bottom ">
+                <div class="bot_flex">
+                    <div>
+                        <div class="thumb">
+                            홍
+                            <a href="#" class="thumb_sett"><img src="./images/ic_setup.png" alt="설정버튼"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="name_text mb4">
+                            <h4>홍길동<small>정보통계 담당관</small></h4>
+                        </div>
+                        <div class="login_st">
+                            <span class="login_time">09:59</span>
+                            <button class="btn_login_style ">연장</button>
+                            <button class="btn_login_style ">로그아웃</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  <!--왼쪽 메뉴 end-->
+
+
+  <!--컨텐츠 start-->  
+    <div class="main_container">
+
+<!--다크모드 버튼-->
+
+
+
+        <div>
+        
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="toggleDarkMode()"  style="border:1px solid #adb5bd">
+                <label class="form-check-label" for="flexSwitchCheckDefault" >다크모드버튼</label>
+            </div>
+
+        </div>
+
+
+        <!-- 상황판 네비게이션 start-->
+        <nav class="situ_board">
+            <div class="situ_select mr10">
+                <select name="" id="" class="inpSt siz_sm">
+                    <option value="">항공</option>
+                </select>
+                <button class="btn_style_normal ic_reset">
+                  
+                </button>
+            </div>
+            
+            <ul class="ul-row">
+                <li>
+                    <div class="situ_box">
+                        <h5>승선검역</h5>
+                        <p><span>1</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>서류심사</h5>
+                        <p><span>123</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>보건상태</h5>
+                        <p><span>1123</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>생략신청</h5>
+                        <p><span>123</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>생략통보</h5>
+                        <p><span>34</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>민원증명</h5>
+                        <p><span>12</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>결제미결</h5>
+                        <p><span>31</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>결재반려</h5>
+                        <p><span>1</span>건</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="situ_box">
+                        <h5>결제대기</h5>
+                        <p><span>14</span>건</p>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- 상황판 네비게이션 end-->
+
+
+
+
+        <div class="section_title_area mt30">
+    	    <div class="section_title">항공검역일지 관리</div>
+        </div>
+        
+
+        <div class="title_half_type mt30 mb10">
+				
+                <!-- 전체건수 -->
+            <div>
+                <p class="text-danger">*필수항목</p>
+            </div>
+        
+            <!-- // 전체건수 -->
+
+            <!-- 버튼 영역 -->
+            <div class="text_align_right">
+                <button type="button" id="btn_regist" class="btn_style_normal c_function ic_manual" >메뉴얼</button>
+            </div>
+            <!-- // 버튼 영역 -->
+            
+        </div>
+
+
+        
+        <div>
+            <table class="table">
+                <caption>조회 테이블</caption>
+                <colgroup>
+                <col width="5%">
+                <col width="10%">
+                <col width="5%">
+                <col width="10%">
+                <col width="5%">
+                <col width="10%">
+                <col width="5%">
+                <col width="10%">
+                <col width="5%">
+                <col width="10%">
+
+                </colgroup>
+                <tr>
+                    <th class="th_point"><span class="pt">검역소</span></th>
+                    <td>
+                        <select class="inpSt">
+                            <option value="" disabled selected hidden>선택</option>
+                            <option value="">리스트 1</option>
+                            <option value="">리스트 2</option>
+                            <option value="">리스트 3</option>
+                            <option value="">리스트 4</option>
+                            <option value="">리스트 5</option>
+                        </select>
+                    </td>
+                    <th>검역일자</th>
+                    <td colspan="3">
+                         <div class="ul-row">
+                              <!-- start:date input box set -->
+                              <div class="date_box">
+                                <input id="datepicker_1" style="width:150px">
+                              </div>
+                            <!-- end:date input box set -->
+                            <span>&nbsp;~&nbsp;</span>
+                            <!-- start:date input box set -->
+                            <div class="date_box">
+                                <input id="datepicker_2" style="width:150px">
+                            </div>
+                            <!-- end:date input box set -->
+                         </div>
+                    </td>
+                    <th>요일</th>
+                    <td>수요일</td>
+                    <th>검역관리지역여부</th>
+                    <td>
+                        <ul class="ul-row">
+                            <li>
+                                <input type="radio" name="g_ch" id="g_ch1" checked>
+                                <label for="g_ch1">전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="g_ch" id="g_ch2">
+                                <label for="g_ch2">관리</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="g_ch" id="g_ch3">
+                                <label for="g_ch3">미관리</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_point"><span class="pt">출발지 국가</span></th>
+                    <td>
+                        <ul class="input-btn-row">
+                            <li><input type="text" name="" id="" class="inpSt" required></li>
+                            <li><button class="btn_style_normal">선택</button></li>
+                        </ul>
+                    </td>
+                    <th class="th_point"><span class="pt">출발지 공항</span></th>
+                    <td><input type="text" name="" id="" class="inpSt" required></td>
+                    <th>
+                        <div class="tit_ic">
+                            판명 
+                            <i class="ic tip ttp">
+                                <span class="ic_tipcon">
+                                툴팁내용<br> 사용법:<br>
+                                 부모에 .ttp 클래스를 넣고 자식에 span태그를 넣어 사용합니다.<br>
+                                .ic클래스 안에 팁을 넣을 경우 자식 span에 .ic_tipcon을 넣어주세요 
+                                </span>
+                            </i>
+                               </div>
+                     
+                    </th>
+                    <td><input type="text" name="" id="" class="inpSt"></td>
+                    <th>항공기 종류</th>
+                    <td>
+                        <select name="" id="" class="inpSt">
+                            <option value="" disabled selected hidden>선택</option>
+                            <option value="">여객기</option>
+                            <option value="">여객기2</option>
+                            <option value="">여객기3</option>
+                            <option value="">여객기4</option>
+                        </select>
+                    </td>
+                    <th>검역여부</th>
+                    <td>
+                        <ul class="ul-row">
+                            <li>
+                                <input type="radio" name="gy_ch" id="gy_ch1" checked>
+                                <label for="gy_ch1">전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gy_ch" id="gy_ch2">
+                                <label for="gy_ch2">완료</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gy_ch" id="gy_ch3">
+                                <label for="gy_ch3">대기</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gy_ch" id="gy_ch4">
+                                <label for="gy_ch4">생략</label>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>경유지 국가</th>
+                    <td>
+                        <ul class="input-btn-row">
+                            <li>
+                                <input type="text" name="" id="" class="inpSt">
+                            </li>
+                            <li><button class="btn_style_normal">선택</button></li>
+                        </ul>
+                    </td>
+                    <th>경유지 공항</th>
+                    <td><input type="text" name="" id="" class="inpSt"></td>
+                    <th>승기/비승기</th>
+                    <td>
+                        <ul class="ul-row">
+                            <li>
+                                <input type="radio" name="gm_ch" id="gm_ch1" checked>
+                                <label for="gm_ch1">전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm_ch" id="gm_ch2">
+                                <label for="gm_ch2">완료</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm_ch" id="gm_ch3">
+                                <label for="gm_ch3">대기</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm_ch" id="gm_ch4">
+                                <label for="gm_ch4">생략</label>
+                            </li>
+                        </ul>
+                    </td>
+                    <th>질문서징구여부</th>
+                    <td>
+                        <ul class="ul-row">
+                            <li>
+                                <input type="radio" name="gm2_ch" id="gm2_ch1" checked>
+                                <label for="gm2_ch1">전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm2_ch" id="gm2_ch2">
+                                <label for="gm2_ch2">완료</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm2_ch" id="gm2_ch3">
+                                <label for="gm2_ch3">대기</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="gm2_ch" id="gm2_ch4">
+                                <label for="gm2_ch4">생략</label>
+                            </li>
+                        </ul>
+                    </td>
+                    <th>보건상태신고</th>
+                    <td>
+                        <ul class="ul-row">
+                            <li>
+                                <input type="checkbox" name="" id="bg_ch1" checked>
+                                <label for="bg_ch1">전체</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="bg_ch2">
+                                <label for="bg_ch2">완료</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="bg_ch3">
+                                <label for="bg_ch3">대기</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="bg_ch3">
+                                <label for="bg_ch3">생략</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                
+
+            </table>
+            
+        </div>
+
+
+
+        <div class="title_half_type mb10 mt50 ">
+
+            <!-- 전체건수 -->
+            <div class="all_count_title">전체건수 : 총 2건</div>
+            <!-- // 전체건수 -->
+    
+            <div class="text_align_right">
+                <button type="button" id="btn_search" class="btn_style_normal c_point" ">조회</button>
+                <button type="button" id="btn_regist" class="btn_style_normal c_point" ">등록</button>
+                <button type="button" id="btn_view" class="btn_style_normal" ">상세보기</button>
+                <button type="button" id="btn_delete" class="btn_style_normal c_del" ">삭제</button>
+                <button type="button" id="btn_delete" class="btn_style_normal c_cancel" onclick="">취소</button>
+                <button type="button" id="btn_excel" class="btn_style_normal c_function ic_save" ">출력</button>
+            </div>
+    
+        </div>
+        <div class="section_grid_area" >
+            <div id="SBGridArea" class="gridStyle" style="height:400px"></div>
+        </div>
+
+
+
+	</div>
+
+
+
+
+
+    </div>
+
+
+    
+
+
+    <!--컨텐츠 end-->
+    
+    
+    
+    
+    
+</div>
+
+
+<script>
+      $( "#datepicker_1" ).datepicker({
+            inline: true,
+            changeYear:true,
+            changeMonth:true,
+            showOn: 'both',
+            buttonImage: './SBGrid/img/grid/cal_button.png',
+            buttonImageOnly: true,
+        });
+        $( "#datepicker_2" ).datepicker({
+            inline: true,
+            changeYear:true,
+            changeMonth:true,
+            showOn: 'both',
+            buttonImage: './SBGrid/img/grid/cal_button.png',
+            buttonImageOnly: true,
+        });
+
+
+</script>
+<script src="./js/ex.js"></script>
+</body>
+</html

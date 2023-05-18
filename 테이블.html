@@ -1,0 +1,1720 @@
+<link rel="stylesheet" href="./css/base.css">
+<link rel="stylesheet" href="./css/basic_style.css">
+
+<style>
+  .workOne_con{max-width:1140px; width:100%; margin:0 auto }
+</style>
+
+
+
+<div class='workOne_con'>
+ 
+
+
+
+				<!-- 화면 영역 -->
+			<form:form modelAttribute="sample" id="workOneDetailForm" name="workOneDetailForm" onsubmit="return false;">
+        
+      
+      <div class='workOne_con'>
+        <div class="table_box">
+          <table class="table" summary="집단발병 관리번호 테이블">
+          <caption>집단발병 관리번호 테이블</caption>
+
+
+          <colgroup>
+            <col width="20%">
+            <col width="10%">
+            <col width="32%">
+            <col width="10%">
+            <col width="28%">
+          </colgroup>
+      
+          <tr>
+            <th rowspan="2">집단발병<br>관리번호
+            </th>
+            <th>집단번호</th>
+            <td>
+              <div>
+                <input type="text" class="inpSt siz_sm"> <input
+                  type="text" class="inpSt siz_sm">
+                <button class="btn_style_normal c_normal">검색</button>
+                <button class="btn_style_normal c_del">집단발병 삭제</button>
+              </div>
+            </td>
+            <th>사례번호</th>
+            <td>
+              <div>
+                <input type="text" class="inpSt siz_sm"> <input
+                  type="text" class="inpSt siz_sm"> <input
+                  type="text" class="inpSt siz_sm">
+              </div>
+            </td>
+      
+          </tr>
+      
+          <tr>
+            <td colspan="4">
+              <p>
+                집단연변은 관할지역에서 집단발병이 발생한 순서대로 아라비아숫자로 연번을 부여하고 발병 사례번호 역시 동일
+                집단내에서 발병한 순서대로 아라비아숫자로 연번을 부여하되, 발병여부가 나중에 확인된 학생은 확인된 순서대로
+                연번을 부여하도록 함. 전산상으로는 해당년도-보건소명-□□-□□□, 으로 확인되게 됨 <br> *
+                개별 환자 접촉자관리 및 역학조사서 등록은 환자 주소지 보건소에서, 유행집단에 대한 조치는 유행발생지 소재
+                관할 보건소에서 함
+              </p>
+      
+      
+            </td>
+          </tr>
+      
+      
+      
+        </table>
+      </div>
+      
+      
+      <div class="table_box">
+        <table class="table table_point">
+          <caption>조사자성명 연락처 시도 조사기관 테이블</caption>
+        <colgroup>
+          <col width="15%">
+          <col width="25%">
+          <col width="10%">
+          <col width="13%">
+          <col width="15%">
+          <col width="22%">
+        </colgroup>
+      
+          <tr>
+            <th>조사자성명</th>
+            <th>연락처</th>
+            <th>시도</th>
+            <th>조사기관</th>
+            <th>조사일</th>
+            <th>개인정보</th>
+          </tr>
+      
+          <tr>
+            <td><input type="text" class="inpSt siz_l"></td>
+            <td>
+              <div class="tel_box">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+            </td>
+            <td>
+              <select name="" id="d" class="inpSt">
+                <option value="">충북</option>
+            </select>
+      
+            </td>
+      
+            <td><select name="" id="" class="inpSt">
+                <option value="">청조사</option>
+            </select></td>
+            <td>
+              <div >
+                <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:72%' />
+              </div>
+            </td>
+      
+      
+            <td>
+              <div class="flex_ct">
+                <input type="text" class="inpSt siz_sm"> <input type="text" class="inpSt siz_sm"> <input
+                  type="text"  class="inpSt siz_sm"> <input type="text"  class="inpSt siz_sm">
+              </div>
+            </td>
+          </tr>
+      
+          <tr>
+            <th>신고의료기관</th>
+            <th>소재자</th>
+            <th>병의원신고일</th>
+            <th>보건소신고일</th>
+            <th>담당의사</th>
+            <th>연락처</th>
+          </tr>
+      
+          <tr>
+            <td><input type="text" class="inpSt siz_ms"> <button class="btn_style_normal c_normal">검색</button></td>
+            <td>
+              <div class="flex_sb">
+                <select name="" id="" class="inpSt siz_sm">
+                  <option value="">선택</option>
+                </select> 
+                <select name="" id="" class="inpSt siz_sm">
+                  <option value="">선택</option>
+                </select> 
+                <input type="text" class="inpSt siz_m">
+                
+              </div>
+            </td>
+            <td><input type="text" class="inpSt"></td>
+      
+            <td><input type="text"  class="inpSt"></td>
+            <td><input type="text"  class="inpSt"></td>
+      
+      
+            <td>
+              <div class="tel_box">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      
+      
+      
+      <div class="table_box">
+      <div class="title_area">
+	                    	<h4><div class="round"></div><span>환자인적사항</span></h4>
+	                	</div>
+	                	
+
+        <table class="table">
+          <caption>환자인적사항 내용 적는 테이블</caption>
+          <colgroup>
+            <col width="10%">
+            <col width="15%">
+            <col width="5%">
+            <col width="12%">
+            <col width="13%">
+            <col width="10%">
+            <col width="10%">
+            <col width="15%">
+          </colgroup>
+          <tr>
+            <th>
+           	<div class="tit_ic">
+            환자성명 
+            <i class="ic tip ttp">
+	            <span class="ic_tipcon">
+	            툴팁내용<br> 사용법:<br>
+	             부모에 .ttp 클래스를 넣고 자식에 span태그를 넣어 사용합니다.<br>
+	            .ic클래스 안에 팁을 넣을 경우 자식 span에 .ic_tipcon을 넣어주세요 
+	            </span>
+            </i>
+           	</div>
+             </th>
+            <td><input type="text" name="" id="" class="inpSt siz_s">
+              <button class="btn_style_normal c_normal">환자정보조회</button></td>
+            <th>성별</th>
+            <td>
+            <ul class="ul-row">
+              <li>
+                <input type="radio" name="chk_sex" id="man" > 
+                <label for="man">남</label> 
+              </li>
+              <li>
+                <input type="radio" name="chk_sex" id="woman"> 
+                <label for="woman">여</label>
+      
+              </li>
+            </ul>
+              </td>
+            <th>
+              <p class="pt">생년월일</p>
+            </th>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:50px" />
+      </td>
+            <th>연령</th>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="text" name="" id="" class="inpSt siz_s">세
+                </li>
+                <li>
+                  <input type="text" name="" id="" class="inpSt siz_s">계열</td>
+                </li>
+              </ul>
+            </tr>
+          <tr>
+            <th>국적</th>
+            <td colspan="5">
+            
+            
+            <ul class="ul-row">
+              <li>
+                <input type="radio" name="nat" id="local" >
+                <label for="local">내국인</label> 
+              </li>
+              <li>
+                <input type="radio" name="nat" id="fore">
+                <label for="fore">외국인</label> 
+              
+              </li>
+              <li>
+              <p class="ref ml10">
+                국적입력(국적: 
+                <input type="text" name="" id="" class="inpSt siz_m mr5" disabled>
+                <button class="btn_style_normal c_normal">검색</button>
+                  )
+              </p>
+              </li>
+              
+            </ul>
+              </td>
+            <th>생존여부</th>
+            <td>
+              <ul class="list_inline">
+                <li>
+                  <input type="radio" name="surv" id="survL" > 
+                  <label for="survL">
+                  생존
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="surv" id="surD"> 
+                  <label for="surD">
+                  사망
+                  </label>
+                </li>
+              </ul>
+            </td>
+            
+          </tr>
+      
+      
+      
+      
+          <tr>
+            <th rowspan="2">환자주소</th>
+            <td colspan="5" rowspan="2">
+           
+                <div class="mb3">
+                  <button class="btn_style_normal c_normal">주소찾기</button>
+                </div>
+                <div class="flex_rd_list">
+                
+                 도로명주소 
+                  <input type="text" name="" id="" class="inpSt siz_m">
+                  <input type="text" name="" id="" class="inpSt siz_ml"> 
+                  <input type="text" name="" id="" class="inpSt siz_ml">
+                </div>
+              
+            </td>
+            <th>연락처</th>
+            <td>
+            
+              <div class="tel_box">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>보호자성명</th>
+            <td>
+              <input type="text" name="" id="" class="inpSt siz_l">
+            </td>
+          </tr>
+      
+          <tr>
+            <th rowspan="2">실거주자</th>
+            <td colspan="7">
+              
+              <div class="mb3">
+                <input type="checkbox" name="" id="realIfe">
+                <label for="realIfe">실거주지가 주민등록 주소지와 동일합니다.</label>
+              </div>
+            <div class="mb3">	<button class="btn_style_normal c_normal">주소찾기</button></div>
+            <div class="flex_rd_list">
+              도로명주소 
+               <input type="text" name="" id="" class="inpSt siz_m">
+               <input type="text" name="" id="" class="inpSt siz_ml"> 
+               <input type="text" name="" id="" class="inpSt siz_ml">
+             </div>
+            </td>
+      
+          </tr>
+            <tr>
+              <td colspan="7" class="top_dott">
+                <p class="inp">직장 등의 사유로 주민등록상 주소와 다른 지역에 거주하거나, 환자와 보호자의 주소지가 다른 경우 환자가 실제 거주하는 주소지를 추가 입력</p>
+              </td>
+            </tr>
+          <tr>
+            <th>소속</th>
+            <td colspan="3">
+              <div>
+                <ul class="ul-row">
+                  <li><input type="radio" name="ss" id="ss1"><label for="ss1">학교</label></li>
+                  <li><input type="radio" name="ss" id="ss2"><label for="ss2">유치원(어린이집)</label></li>
+                  <li><input type="radio" name=ss"" id="ss3"><label for="ss3">군부대</label></li>
+                </ul>
+              </div>
+              <div>
+                <ul class="ul-row">
+                  <li><input type="radio" name="ss" id="ss4"><label for="ss4">회사</label></li>
+                  <li><input type="radio" name="ss" id="ss5"><label for="ss5">기타</label>(
+                    <input type="text" name="" id="" class="inpSt siz_m" disabled />
+                   
+                    )</li>
+                  <li><input type="radio" name="" id=""><label for="">없음</label></li>
+                </ul>
+              </div>
+            </td>
+            <th>소속기관명</th>
+            <td colspan="3">
+              <div class="ul-col">
+                <div><input type="text" name="" id="" class="inpSt siz_l"></div>
+        
+                <ul class="ul-row">
+                  <li>
+                    (학년: <input type="text" name="" id="" class="inpSt siz_m" disabled>
+                  </li>
+                  <li>
+                    
+                            /반: <input type="text" name="" id="" class="inpSt siz_m" disabled>)
+                  </li>
+                </ul>
+                <p>학생인 경우 학년/반 추가기입</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>소속기관 연락처</th>
+            <td colspan="3">
+              <div class="tel_box nm">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+            </td>
+            <th>소속기관 관할보건소</th>
+            <td colspan="3">
+              <select name="" id="" class="inpSt siz_m">
+                <option value="">선택</option>
+              </select>
+      
+              <select name="" id="" class="inpSt siz_l">
+                <option value="">선택</option>
+              </select>
+      
+            </td>
+          </tr>
+      
+          <tr>
+            <th>소속집단 인원</th>
+            <td colspan="7">
+              1) 전체 총 <input type="text" name="" id="" class="inpSt siz_m">명 
+              2) 해당 학급 인원수 <input type="text" name="" id="" class="inpSt siz_m">명 
+              <p class="inp">
+                어린이집, 유치원, 학교 등의 경우 소속집단의 반 인원과 전체 총인원 기재
+              </p>
+            </td>
+          </tr>
+      
+        </table>
+      </div>
+      
+      
+      
+      
+      
+      
+      <div class="table_box">
+      
+      <div class="title_area">
+	                    	<h4><div class="round"></div><span>고위험군 추가 조사</span></h4>
+	                	</div>
+	                	
+	                	
+
+        <table class="table">
+          <caption>고위험군 추가 조사 테이블</caption>
+          <tr>
+            <th rowspan="2">고위험군 여부</th>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="radio" name="hi_g" id="hi_y">
+                  <label for="hi_y">예</label>
+                </li>
+                <li>
+                  <input type="radio" name="hi_g" id="hi_n">
+                  <label for="hi_n">아니오</label>
+                </li>
+              </ul>
+            </td>
+            </tr>
+          <tr>
+            <td>
+              <p class="ref mb5">예(고위험군)인 경우 해당 고위험군 사항 체크</p>
+              <ul class="ul-col">
+                <li>
+                  <input type="checkbox" name="" id="ckList1">
+                  <label for="ckList1">수두병력이 없거나 접종력이 없는 면역저하자 (HIV 감염포함)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="ckList2">
+                  <label for="ckList2">면역력이 없는 임산부</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="ckList3">
+                  <label for="ckList3">분만 전 5일부터 분만 후 2일 내에 수두에 걸린 임산부에게 태어난 아기</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="ckList4">
+                  <label for="ckList4">면역력이 없는 모체에게 재태연령 28주 이상으로 태어나 입원중인 미숙아</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="ckList5">
+                  <label for="ckList5">모체의 수두면역력과 상관없이 재태연령 28주 미만, 출생체중 1,000g 이하의 입원중인 미숙아</label>
+                </li>		
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      <div class="table_box">
+            <div class="title_area">
+	                    	<h4><div class="round"></div><span>임상 증상 및 경과 [해당 사항에 모두 ✓ 표시]</span></h4>
+	                	</div>
+	                	
+	                	
+	                	
+
+        <table class="table">
+          <caption>임상 증상 및 경과 [해당 사항에 모두 표시 하는 테이블]</caption>
+          <tr>
+            <th rowspan="2">주요증상</th>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="checkbox" name="" id="cli1">
+                  <label for="cli1">발열</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="cli2">
+                  <label for="cli2">발진</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="cli3">
+                  <label for="cli3">두통</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="cli4">
+                  <label for="cli4">관절통</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" id="cli5">
+                  <label for="cli5">기타</label>
+                  (<input type="text" name="" id="" class="inpSt siz_m" disabled>)
+                </li>
+              </ul>
+            </td>
+            <th>최초 증상 발생일</th>
+            <td>
+              <div >
+                <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:50%' />
+              </div>
+      
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <div class="flex">
+                <div class="cate">
+                  발진 시작일 : <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:100%; max-width:150px' />
+                </div>
+                <div>
+                  발진 시작 부위 : 
+                  <ul class="ul-row">
+                    <li>
+                      <input type="radio" name="rashRdo" id="rash1" >
+                      <label for="rash1">얼굴/목</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="rashRdo" id="rash2">
+                      <label for="rash2">몸통</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="rashRdo" id="rash3">
+                      <label for="rash3">팔/다리</label>
+                    </li>
+                    <li>
+                      <p class="ref ml10">
+                      (수포 병변 개수 )</p>
+                    </li>
+                    <li>
+                      <input type="radio" name="sp" id="sp1">
+                      <label for="sp1"><50</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="sp" id="sp2">
+                      <label for="sp2"><50~249</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="sp" id="sp3">
+                      <label for="sp3"><250~499</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="sp" id="sp4">
+                      <label for="sp4">≥500</label>
+                    </li>
+              
+                  </ul>
+                </div>
+             </div>
+            </td>
+            <th>신고기관 진단일</th>
+            <td>
+              <div>
+                <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:50%' />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>합병증 유무</th>
+            <td colspan="3">
+              <ul class="ul-col">
+                <li class="dis_flex">
+                  <div>
+                    <input type="radio" name="hbyn" id="hby" >
+                    <label for="hby">예</label>
+                  </div>
+                  
+                  <ul class="ul-row">
+                    <li>
+                      <p class="ref ml10">
+                        "예"인경우 합병증 종류 : 
+                      </p>
+      
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb1">
+                      <label for="hb1">피부/연조직 감염</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb2">
+                      <label for="hb2">소뇌염/실조</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb3">
+                      <label for="hb3">혈소판감염증</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb4">
+                      <label for="hb4">뇌염</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb5">
+                      <label for="hb5">탈수</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb6">
+                      <label for="hb6">폐렴</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="" id="hb7">
+                      <label for="hb7">기타</label>
+                      (
+                        <input type="text" name="" id="" class="inpSt siz_m" disabled>
+                      )
+                    </li>
+                    
+                  </ul>
+                  
+                </li>
+                <li>
+                  <input type="radio" name="hbyn" id="hbn">
+                  <label for="hbn">아니오</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="table_box">
+               <div class="title_area">
+	                    	<h4><div class="round"></div><span>의료기관 이용력[발진 발생 3주 전부터 조사 시점까지]</span></h4>
+	                	</div>
+
+        <table class="table">
+          <caption>의료기관 이용력 적는 테이블</caption>
+          <colgroup>
+            <col width="18%">
+            <col width="3%">
+            <col width="15%">
+            <col width="20%">
+            <col width="20%">
+            <col width="25%">
+          </colgroup>
+          <tr>
+            <th rowspan="2" colspan="2">진료상황</th>
+            <th colspan="2">의료기관</th>
+            <th rowspan="2">진료날짜</th>
+            <th rowspan="2">격리입원 기간
+              <p>격리입원:1인실 입원, 다인실 1인 사용,코호트 격리</p>
+            </th>
+          </tr>
+          <tr>
+            <th>기관명</th>
+            <th>연락처</th>
+          </tr>
+      
+          <tr>
+            <th>
+             <div class="tit_ic">
+                <input type="checkbox" name="" id="">
+                외래 이용력 없음
+              <a href="#none" class="plus ml5"></a>
+             </div>
+            </th>
+            <th>
+	            <div class="tit_ic">
+	              <a href="#none" class="min"></a>
+              </div>
+            </th>
+            <td><input type="text" name="" id="" class="inpSt"></td>
+            <td>
+              <div class="tel_box">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+      
+            </td>
+            <td>
+      
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px" />
+              ~
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px"/>
+      
+            </td>
+            <td></td>
+          </tr>
+      
+          <tr>
+            <th>
+             <div class="tit_ic">
+                <input type="checkbox" name="" id="">
+                입원 안함
+                 <a href="#none" class="plus ml5"></a>
+             </div>
+               </th>
+            <th>
+              <div class="tit_ic">
+                <a href="#none" class="min"></a>
+              </div>
+            </th>
+            <td><input type="text" name="" id="" class="inpSt"></td>
+            <td>
+              <div class="tel_box">
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div class="hp">-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+                <div>-</div>
+                <div>
+                  <input type="tel" placeholder="" class="inp_st_tel">
+                </div>
+              </div>
+      
+            </td>
+            <td>
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px" />
+              ~
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px"/>
+            </td>
+            <td>
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px"/>
+              ~
+              <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:60px"/>
+              <div>
+                <input type="checkbox" name="" id="hdno">
+                <label for="hdno">해당없음</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="table_box">
+                 <div class="title_area">
+	                    	<h4><div class="round"></div><span>실험실적 검사</span></h4>
+	                	</div>
+     
+        <table class="table">
+          <caption>실험실적 검사 테이블</caption>
+          <colgroup>
+           <col width="17%">
+           <col width="3%">
+           <col width="10%">
+           <col width="10%">
+           <col width="10%">
+           <col width="15%">
+           <col width="15%">
+           <col width="25%">
+          </colgroup>
+          <tr>
+            <th colspan="2">검사종료</th>
+            <th>의료기관 검체채취일</th>
+            <th>검사기관 검체접수일</th>
+            <th>검사기관 결과보고일</th>
+            <th>검사기관</th>
+            <th>검체종류</th>
+            <th>검사종류 및 결과</th>
+          </tr>
+          <tr>
+            <th>
+              <div class="tit_ic">
+                <input type="checkbox" name="" id="">
+                바이러스 분리 미실시
+                 <a href="#none" class="plus ml5"></a>
+              </div >
+            </th>
+            <th>    <div class="tit_ic">
+              <a href="#none" class="min"></a>
+            </div></th>
+            <td>
+          <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px" />
+            </td>
+            <td>
+             
+                <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px" />
+            
+            </td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gs" id="gs1" >
+                  <label for="gs1">민간검사기관</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs" id="gs2" >
+                  <label for="gs2">보건환경연구원</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs" id="gs3" >
+                  <label for="gs3">질병관리청</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gch" id="gch1" >
+                  <label for="gch1">혈액(혈청)</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch" id="gch2" >
+                  <label for="gch2">수포액</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch" id="gch3" >
+                  <label for="gch3">비인두도찰물</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch" id="gch4" >
+                  <label for="gch4">뇌척수액</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch" id="gch5" >
+                  <label for="gch5">가피(딱지)</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="radio" name="gsj" id="gsj1" >
+                  <label for="gsj1">양성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj" id="gsj2" >
+                  <label for="gsj2">음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj" id="gsj3" >
+                  <label for="gsj3">진행중</label>
+                </li>
+              </ul>
+      
+            </td>
+          </tr>
+      
+          <tr>
+            <th>
+              <div class="tit_ic">
+                <input type="checkbox" name="" id="">
+                lgm 항체 미실시
+                 <a href="#none" class="plus ml5"></a>
+              </div >
+
+            </th>
+            <th>    <div class="tit_ic">
+              <a href="#none" class="min"></a>
+            </div></th>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gs2" id="gs2_1" >
+                  <label for="gs2_1">민간검사기관</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs2" id="gs2_2" >
+                  <label for="gs2_2">보건환경연구원</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs2" id="gs2_3" >
+                  <label for="gs2_3">질병관리청</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gch2" id="gch2_1" >
+                  <label for="gch2_1">혈액(혈청)</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="radio" name="gsj2" id="gsj2_1" >
+                  <label for="gsj2_1">양성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj2" id="gsj2_2" >
+                  <label for="gsj2_2">의음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj2" id="gsj2_3" >
+                  <label for="gsj2_3">음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj2" id="gsj2_4" >
+                  <label for="gsj2_4">진행중</label>
+                </li>
+              </ul>
+      
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <div class="tit_ic">
+                <input type="checkbox" name="" id="">
+                lgG 항체 미실시
+                <a href="#none" class="plus ml5"></a>
+              </div >
+            </th>
+            <th>    <div class="tit_ic">
+              <a href="#none" class="min"></a>
+            </div></th>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px" /></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gs3" id="gs3_1" >
+                  <label for="gs3_1">민간검사기관</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs3" id="gs3_2" >
+                  <label for="gs3_2">보건환경연구원</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs3" id="gs3_3" >
+                  <label for="gs3_3">질병관리청</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gch3" id="gch3_1" >
+                  <label for="gch3_1">혈액(혈청)</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="radio" name="gsj3" id="gsj3_1" >
+                  <label for="gsj3_1">양성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj3" id="gsj3_2" >
+                  <label for="gsj3_2">의음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj3" id="gsj3_3" >
+                  <label for="gsj3_3">음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj3" id="gsj3_4" >
+                  <label for="gsj3_4">진행중</label>
+                </li>
+              </ul>
+      
+            </td>
+          </tr>
+      
+          <tr>
+            <th>
+              <div class="tit_ic">         
+                <input type="checkbox" name="" id=""> 유전자 검출 미실시
+                <a href="#none" class="plus ml5"></a>
+              </div> 
+            </th>
+            <th>    <div class="tit_ic">
+              <a href="#none" class="min"></a>
+            </div></th>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px" /></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100%; max-width:60px"/></td>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gs4" id="gs4_1" >
+                  <label for="gs4_1">민간검사기관</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs4" id="gs4_2" >
+                  <label for="gs4_2">보건환경연구원</label>
+                </li>
+                <li>
+                  <input type="radio" name="gs4" id="gs4_3" >
+                  <label for="gs4_3">질병관리청</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+      
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="gch4" id="gch4_1" >
+                  <label for="gch4_1">혈액(혈청)</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch4" id="gch4_2" >
+                  <label for="gch4_2">수포액</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch4" id="gch4_3" >
+                  <label for="gch4_3">비인두도찰물</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch4" id="gch4_4" >
+                  <label for="gch4_4">뇌척수액</label>
+                </li>
+                <li>
+                  <input type="radio" name="gch4" id="gch4_5" >
+                  <label for="gch4_5">가피(딱지)</label>
+                </li>
+              </ul>
+      
+      
+      
+            </td>
+            <td>
+              <ul class="ul-row">
+                <li>
+                  <input type="radio" name="gsj4" id="gsj4_1" >
+                  <label for="gsj4_1">양성</label>
+                </li>
+            
+                <li>
+                  <input type="radio" name="gsj4" id="gsj4_2" >
+                  <label for="gsj4_2">음성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gsj4" id="gsj4_3" >
+                  <label for="gsj4_3">진행중</label>
+                </li>
+              </ul>
+      
+            </td>
+          </tr>
+      
+      
+        </table>
+      </div>
+      
+      
+      <div class="table_box">
+        <div class="dis_flex">
+     
+          <ul class="ul-row ">
+          <li>
+                      <div class="title_radio_area mr10">
+	                    	<h4><div class="round"></div><span>실험실적 검사</span></h4>
+	                	</div>
+          </li>
+          
+            <li><input type="radio" name="yj" id="yj_1"> <label
+              for="yj_1">유</label></li>
+            <li><input type="radio" name="yj" id="yj_2"> <label
+              for="yj_2">무</label></li>
+            <li><input type="radio" name="yj" id="yj_3"> <label
+              for="yj_3">모름</label></li>
+          </ul>
+        </div>
+      
+        <table class="table">
+          <colgroup>
+            <col width="2%">
+            <col width="2%">
+            <col width="5%">
+            <col width="10%">
+            <col width="5%">
+            <col width="10%">
+            <col width="5%">
+            <col width="8%">
+            <col width="6%">
+            <col width="12%">
+            <col width="5%">
+            <col width="15%">
+            <col width="5%">
+            <col width="10%">
+          </colgroup>
+          <tr>
+            <th>
+             <div class="tit_ic">
+	              <a href="#none" class="plus"></a>
+	         </div>
+    
+            </th>
+            <th>    
+	            <div class="tit_ic">
+	              <a href="#none" class="min"></a>
+	            </div>
+            </th>
+            <th>접종지수</th>
+            <td><input type="text" name="" id="" class="inpSt" disabled></td>
+            <th>접종시기</th>
+            <td>
+              <div >
+                <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:60px' />
+              </div>
+            </td>
+            <th>백신종류</th>
+            <td>
+              <input type="radio" name="" id="bsj1"  class="inpSt siz_s">
+              <label for="bsj1">수두</label>
+            </td>
+            <th>접종장소</th>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="jjp" id="jjp1" >
+                  <label for="jjp1">병의원</label>
+                </li>
+                <li>
+                  <input type="radio" name="jjp" id="jjp2">
+                  <label for="jjp2">보건소</label>
+                </li>
+                <li>
+                  <input type="radio" name="jjp" id="jjp3">
+                  <label for="jjp3">기타</label>
+                  (
+                    <input type="text" name="" id="" class="inpSt siz_s" disabled>
+                  )
+                </li>
+              </ul>
+            </td>
+            <th>접종확인원</th>
+            <td>
+              <ul class="ul-col">
+                <li>
+                  <input type="radio" name="jjh" id="jjh1" >
+                  <label for="jjh1">예방접종등록기록</label>
+                </li>
+                <li>
+                  <input type="radio" name="jjh" id="jjh2">
+                  <label for="jjh2">아기수첩</label>
+                </li>
+                <li>
+                  <input type="radio" name="jjh" id="jjh3">
+                  <label for="jjh3">환자/보호자 기억</label>
+                </li>
+                <li>
+                  <input type="radio" name="jjh" id="jjh4">
+                  <label for="jjh4">기타</label>
+                  (
+                    <input type="text" name="" id="" class="inpSt siz_s" disabled>
+                  )
+                </li>
+              </ul>
+            </td>
+            <th>연계</th>
+            <td>
+              <input type="text" name="" id="" value="N" class="inpSt siz_s">
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="table_box">
+
+           <div class="title_area mr10">
+	                    	<h4><div class="round"></div><span>감염원 조사</span></h4>
+	                	</div>
+	                	
+        <table class="table">
+          <caption>발진발생 전 3주간 유사증상자 접촉력 적는 테이블</caption>
+          <tr>
+            <th colspan="2" class="txtL">
+              
+              <ul class="ul-row">
+                <li><p class="mr5">발진발생 전 3주간 유사증상자 접촉력</p></li>
+                <li> 
+                  <input type="radio" name="gjo" id="gjoY">
+                  <label for="gjoY">예</label>
+                </li> 
+                <li> 
+                  <input type="radio" name="gjo" id="gjoN" > 
+                  <label for="gjoN">아니오</label>
+                </li>
+              </ul>
+            </th>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p class="ref mb5">"예"인 경우 선행 유증상자 정보 작성</p>
+              
+                              <table class="table">
+                                <tr>
+                                  <th>성명</th>
+                                  <th>연령</th>
+                                  <th>소속</th>
+                                  <th>연락처</th>
+                                  <th>관계</th>
+                                  <th>발병일</th>
+                                  <th>환자구분</th>
+                                  <th>예방 접종력</th>
+                                  <th>
+                                  	<div>
+                                  	  <a href="#none" class="plus"></a>
+                                  	</div>
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="text" name="" id="" class="inpSt siz_s" disabled >
+                                  </td>
+                                  <td>
+                                    <input type="text" name="" id="" class="inpSt siz_s" disabled >
+                                  </td>
+                                  <td>
+                                    <input type="text" name="" id="" class="inpSt siz_s" disabled >
+                                  </td>
+                                  <td>
+                                    <div class="tel_box">
+                                      <div>
+                                        <input type="tel" placeholder="" class="inp_st_tel">
+                                      </div>
+                                      <div class="hp">-</div>
+                                      <div>
+                                        <input type="tel" placeholder="" class="inp_st_tel">
+                                      </div>
+                                      <div>-</div>
+                                      <div>
+                                        <input type="tel" placeholder="" class="inp_st_tel">
+                                      </div>
+                                    </div>
+                
+                                  </td>
+                                  <td>
+                                    <input type="text" name="" id="" class="inpSt siz_s" disabled >
+                                  </td>
+                                  <td>
+                                    <div>
+                                      <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:60px' />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <ul class="ul-row">
+                                      <li>
+                                        <input type="radio" name="hjg" id="hjg1" > 
+                                        <label for="hjg1">확진</label> 
+                                      </li>
+                                      <li>
+                                        <input type="radio" name="hjg" id="hjg2"> <label
+                                        for="hjg2">의사</label>
+                                      
+                                      </li>
+                                    </ul>
+                  
+                                  </td>
+                                  <td>
+                                    <ul class="ul-row">
+                                      <li>
+                                        <input type="radio" name="ebj" id="ebj1" > 
+                                        <label for="ebj1">접종</label> 
+                                        (
+                                          <input type="text" name="" id=""  class="inpSt siz_s" disabled>
+                                        )회
+                                      </li>
+                                      <li>
+                                        <input type="radio" name="ebj" id="ebj2"> <label
+                                        for="ebj2">안함</label>
+                                      </li>
+                                      <li>
+                                        <input type="radio" name="ebj" id="ebj3"> <label
+                                        for="ebj3">모름</label>
+                                      </li>
+                                    </ul>
+                                  </td>
+                                  <td>    <div class="tit_ic">
+                                    <a href="#none" class="min"></a>
+                                  </div></td>
+                                </tr>
+                            
+                              
+                              </table>
+            </td>
+          </tr>
+      
+            
+      
+      <tr>
+      <th rowspan="3">5.2 증상 발생 15일 전부터 50일 전 까지 단체 급식을 한적 있는지?</th>
+      <td >
+      <ul class="ul-row">
+      <li>
+      <input type="radio" name="jsb1" id="jsb1_1" > 
+      <label for="jsb1_1">있음</label> 
+      </li>
+      <li>
+      <input type="radio" name="jsb1" id="jsb1_2"> 
+      <label for="jsb1_2">없음</label>
+      </li>
+      <li>
+      <input type="radio" name="jsb1" id="jsb1_3"> 
+      <label for="jsb1_3">모름</label>
+      </li>
+      </ul>
+      
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <ul class="ul-col ali_start">
+        <li>
+        <p class="ref">5.2.1 있는 경우</p>
+        </li>
+        <li>
+        <div>
+            
+          급식소 명칭: <input type="text" name="" id="" disabled>
+          급식한 날짜: 
+          <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:120px' />
+        </div>
+  
+          <div>
+            
+            <ul class="ul-row">
+              <li>급식소의 유사환자 여부: </li>
+              <li>
+                <input type="radio" name="jsb2" id="jsb2_1" > 
+                <label for="jsb2_1">있음</label> 
+              </li>
+              <li>
+                <input type="radio" name="jsb2" id="jsb2_2"> 
+                <label for="jsb2_2">없음</label>
+              </li>
+              <li>
+                <input type="radio" name="jsb2" id="jsb2_3"> 
+                <label for="jsb2_3">모름</label>
+              </li>
+            </ul>
+        
+          </div>
+        
+        
+        </li>
+    </ul>
+      </td>
+      </tr>
+      
+      
+      <tr>
+      <td>
+      <p class="ref mb5">
+      5.2.2 있는 경우
+      </p>
+      
+      <table class="table">
+        <caption>증상 관련 테이블</caption>
+      <colgroup>
+      <col width="7%">
+      <col width="30%">
+      <col width="30%">
+      <col width="30%">
+      <col width="3%">
+      </colgroup>
+      <tr>
+      <th>연번</th>
+      <th>이름</th>
+      <th>관계</th>
+      <th>발생일</th>
+      <th>
+        <a href="#none" class="plus"></a>
+ </th>
+      </tr>
+      <tr>
+      <td>1</td>
+      <td><input type="text" name="" id="" class="inpSt" disabled></td>
+      <td><input type="text" name="" id="" class="inpSt" disabled></td>
+      <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:72%' /></td>
+      <td><a href="#none" class="min"></a></td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <th rowspan="4">
+      5.3 증상 발생 15일 전부터 50일 전 까지 국외 여행/출장 등을 간 적이 있는지?
+      </th>
+      
+      <td>
+      <ul class="ul-row">
+      <li>
+        <input type="radio" name="jsb3" id="jsb3_1" > 
+        <label for="jsb3_1">있음</label> 
+      </li>
+      <li>
+        <input type="radio" name="jsb3" id="jsb3_2"> 
+        <label for="jsb3_2">없음</label>
+      </li>
+      <li>
+        <input type="radio" name="jsb3" id="jsb3_3"> 
+        <label for="jsb3_3">모름</label>
+      </li>
+      </ul>
+      </td>
+      </tr>
+      
+      <tr>
+      <td>
+      <p class="ref mb5">5.3.1 있는 경우</p>
+      <table class="table">
+      <tr>
+      <th>연번</th>
+      <th>국가</th>
+      <th>지역/도시</th>
+      <th>출국일</th>
+      <th>입국일</th>
+      <th>교통수단</th>
+      <th> <a href="#none" class="plus"></a></th>
+      </tr>
+      <tr>
+      <td>1</td>
+      <td><input type="text" name="" id="" class="inpSt siz_l" disabled></td>
+      <td><input type="text" name="" id="" class="inpSt siz_l"  disabled></td>
+      <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:72%' /></td>
+      <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:72%' /></td>
+      <td><input type="text" name="" id="" class="inpSt siz_l" disabled></td>
+      <td><a href="#none" class="min"></a></td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <p class="ref dis_flex">
+       <span> 5.3.2 같이 국외 여행/출장을 간 사람 중 유사환자 여부 :</span>
+      
+          <span>
+            <input type="radio" name="jsb4" id="jsb4_1" > 
+            <label for="jsb4_1">있음</label> 
+          </span>
+       
+          <span>
+            <input type="radio" name="jsb4" id="jsb4_2"> 
+            <label for="jsb4_2">없음</label>
+          </span>
+            <span>
+                  <input type="radio" name="jsb4" id="jsb4_3"> 
+                  <label for="jsb4_3">모름</label>
+            </span>
+            
+      </p>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <p class="ref mb5">
+      5.3.3 있는 경우
+      </p>
+      
+      <table class="table">
+        <caption>발생관계테이블</caption>
+       <colgroup>
+      <col width="7%">
+      <col width="30%">
+      <col width="30%">
+      <col width="30%">
+      <col width="3%">
+      </colgroup>
+      <tr>
+      <th>연번</th>
+      <th>이름</th>
+      <th>관계</th>
+      <th>발생일</th>
+      <th> <a href="#none" class="plus"></a></th>
+      </tr>
+      <tr>
+      <td>1</td>
+      <td><input type="text" name="" id="" class="inpSt" disabled></td>
+      <td><input type="text" name="" id="" class="inpSt" disabled></td>
+      <td><dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style='width:72%' /></td>
+      <td><a href="#none" class="min"></a></td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <th rowspan="2">5.4 공동시설 거주 여부</th>
+      <td>
+      <ul class="ul-row">
+      <li>
+      <input type="radio" name="jsb5" id="jsb5_1" > 
+      <label for="jsb5_1">있음</label> 
+      </li>
+      <li>
+      <input type="radio" name="jsb5" id="jsb5_2"> 
+      <label for="jsb5_2">없음</label>
+      </li>
+      <li>
+      <input type="radio" name="jsb5" id="jsb5_3"> 
+      <label for="jsb5_3">모름</label>
+      </li>
+      </ul>
+      
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <ul class="ul_row">
+        <li>
+        5.4.1 
+        </li>
+        <li>
+
+          <p class="ref">'예'일 경우 (주소: 
+          <select name="" id="" class="inpSt siz_m mr5">
+          <option value="" >선택</option>
+          </select> 
+          <select name="" id="" class="inpSt siz_m mr5">
+          <option value="" >선택</option>
+          </select> 
+          <input type="text" name="" id="" class="inpSt siz_ml" disabled>
+          )
+          </p>
+        </li>
+      </ul>
+      <ul class="ul-row">
+      <li>
+      <input type="radio" name="jsb6" id="jsb6_1" > 
+      <label for="jsb6_1">기숙학교</label> 
+      </li>
+      <li>
+      <input type="radio" name="jsb6" id="jsb6_2"> 
+      <label for="jsb6_2">보육/요양원</label>
+      </li>
+      <li>
+      <input type="radio" name="jsb6" id="jsb6_3"> 
+      <label for="jsb6_3">병원</label>
+      </li>
+      <li>
+      <input type="radio" name="jsb6" id="jsb6_3"> 
+      <label for="jsb6_3">기타</label>
+      (<input type="text" name="" id="" disabled>)
+      </li>
+      </ul>
+      </td>
+      </tr>
+      <tr>
+      <td colspan="2">*감염원 중 확진자가 신고 안된 경우 역학조사서 작성하여 신고 </td>
+      </tr>
+      <tr>
+      <th colspan="2" class="txtL">
+        <ul class="ul-row">
+          <li>
+          발진발생 3주간 해외여행력 
+
+        </li>
+      <li>
+      <input type="radio" name="bs" id="bs_y"> 
+      <label for="bs_y">예</label> 
+      </li>
+      <li>
+      <input type="radio" name="bs" id="bs_n" > 
+      <label for="bs_n">아니오</label>
+      </li>
+      </ul>
+      </th>
+      </tr>
+      <tr>
+      <td colspan="2">
+      <p class="ref mb5">'예'인 경우 해외 여행 정보 작성</p>
+      <table class="table">
+        <caption>해외 여행 국가 정보 작성 테이블</caption>
+       <colgroup>
+      <col width="50%">
+      <col width="30%">
+      <col width="17%">
+      <col width="3%">
+      </colgroup>
+      <tr>
+      <th>여행 국가</th>
+      <th>여행 기간</th>
+      <th>동행자 중 유증상자</th>
+      <th> <a href="#none" class="plus"></a></th>
+      </tr>
+      <tr>
+      <td>
+        <input type="text" name="" id="" class="inpSt siz_m" disabled>
+        <button class="btn_style_normal c_normal">국가검색</button>
+        (도시명:<input type="text" name="" id="" class="inpSt siz_ml" disabled>)
+      </td>
+      <td>
+        <div>
+          <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value="" style="width:100px" />
+          ~
+          <dis:calendar calId="" name="" showText="true" clean="true" refEnId="" value=""  style="width:100px" />
+        </div>
+      
+      </td>
+      <td>
+        <ul class="ul-row">
+          <li>
+            <input type="radio" name="bs2" id="bs2_y"> 
+            <label for="bs2_y">있음</label> 
+          </li>
+          <li>
+            <input type="radio" name="bs2" id="bs2_n" > 
+            <label for="bs2_n">없음</label>
+          </li>
+        </ul>
+      </td>
+      <td><a href="#none" class="min"></a></td>
+      </tr>
+      
+      </table>
+      </td>
+      </tr>
+      
+        </table>
+        
+      
+      </div>
+      
+      
+      <div class="table_box">
+     
+          <div class="title_area mr10">
+	                    	<h4><div class="round"></div><span>접촉자 조사</span></h4>
+	                	</div>
+	                	
+	                	
+        <table class="table">
+          <caption>안내 테이블</caption>
+          <th class="txtL">
+            <p class="inp">
+              (별도의 서식을 작성하지 않으나 환자의 동일 소속집단인 가족, 학교 등에서의 유증상 여부를 1주일 단위 모니터링 하며, 최종환자 발생 후 잠복기의 2주기에 해당되는 6주 기간 까지 추가환자 발생이 없는
+              경우 종료함)
+            </p>
+          </th>
+        </table>
+      </div>
+      <div class="table_box">
+          <div class="title_area mr10">
+	                    	<h4><div class="round"></div><span>유행종결보고</span></h4>
+	                	</div>
+        <table class="table">
+          <caption>안내 테이블</caption>
+          <th class="txtL">
+            <p class="inp">유행종료 시 유행 역학조사 결과보고서와 함께 유행종결보고를 실시하도록 함</p>
+          </th>
+        </table>
+      </div>
+      
+      <div class="table_box">
+      
+           <div class="title_area mr10">
+	                    	<h4><div class="round"></div><span>종합의견</span></h4>
+	                	</div>
+	                	
+      
+        <table class="table">
+          <caption>보건소 의견 적는 테이블</caption>
+          <th>보건소 의견</th>
+          <td>
+            <textarea name="" id="" class="textarea_style"></textarea>
+          </td>
+        </table>
+      </div>
+        
+      </div>
+          
+				</form:form>
+				<!-- //화면 영역 -->
+
+			</div>
+  
+</div>
+    

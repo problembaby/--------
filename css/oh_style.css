@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/*
+2023.04.12 생성
+생성자 : 오청열
+Description: css 작업 임시 파일
+*/
+
+
+:root{
+	--oh-modal-title-padding:20px;/*모달 타이틀패딩*/
+	--oh-normal-fontSize:14px;/*기본폰트사이즈*/
+}
+
+/* ul css */
+.ul-col{display: flex; flex-direction:column; gap:4px }
+
+.ul-row{display: flex;}
+.ul-row li{margin-right:4px; }
+.ul-row li:last-child{margin-right:0px; }
+
+
+
+
+/* svg */
+
+/* flex css */
+.flex_sb{    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+.flex_ct{
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4px
+}
+.flex_rd_list{
+	 display: flex;
+    align-items: center;
+    gap:4px
+	
+}
+.flex_col{
+ display: flex; 
+ flex-direction: column;
+}
+
+/*************************
+modal css 수정 작업 
+start 
+*************************/
+
+/*의료기관, 국가코드, 관리기관검색 css */
+.modal_search_area {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 0 var(--oh-modal-title-padding);
+}
+.modal_search_area > .search_title {flex: 0 1 25%; }
+.modal_search_area > div:nth-child(2) {flex-grow:1; padding:0 10px; box-sizing: border-box}
+.modal_input_search{
+	width:100%; 
+	border-radius:4px
+}
+
+
+/*모달 도로명주소검색 css*/
+.modal_RNsearch_area{display:flex; justify-content:space-between; align-items: center; padding: 0 var(--oh-modal-title-padding); }
+.modal_RNsearch_area > .search_title {flex : 0 1 10%; }
+.modal_RNsearch_area > .search_input_box{flex-grow:1; padding:0 10px; box-sizing: border-box}
+.modal_RNsearch_area > .search_input_box ul{display: flex; justify-content:space-around;}
+.modal_RNsearch_area > .search_input_box ul li{padding:0 10px; display:flex; align-items: center; flex-wrap: no-wrap;}
+.modal_RNsearch_area > .search_input_box ul li label{margin-right:5px; width:100px; }
+.modal_RNsearch_area > .search_input_box ul li input[type=text]{width:100%}
+
+.modal_RNsearch_area_two{display:flex; justify-content:space-between; align-items: center; padding: 0 var(--oh-modal-title-padding); }
+.modal_RNsearch_area_two > div{display:flex; align-items: center; }
+.modal_RNsearch_area_two > div:nth-child(1), .modal_RNsearch_area_two > div:nth-child(2){margin-right:10px; width:100%; padding-right:10px}
+.modal_RNsearch_area_two > div:nth-child(1){margin-right:35px}
+.modal_RNsearch_area_two > div > label{margin-right:5px; width:100px; }
+
+
+@media (max-width:768px){
+	
+}
+
+/**************************
+modal css 수정 작업 end
+**************************/
+
+
+
+/**************************
+workOneDetail.jsp 
+css 작업 
+2023.04.14
+start
+**************************/
+
+.workOne_con h3{font-size:20px; margin-bottom:10px; font-weight:500}
+.workOne_con .table_box{margin-top:20px}
+
+.tel_box{display:flex; width:100%; max-width:180px; margin:0 auto; justify-content: space-between;}
+.nm{margin:0;}
+.hp{margin:0 2px}
+.top_dott{border-top: 1px dotted!important;}
+
+/*input*/
+label{cursor: point}
+.inp_st_number{width:100%; max-width:75px;}
+.inp_st_number_s{width:100%; max-width:40px;}
+.inp_st_name{width:100%; max-width:200px;}
+.inp_st_name_s{width:100%; max-width:55px;}
+.inp_st_tel{width:100%; max-width:50px;}
+.inp_st_addr{width:100%; max-width:70px;}
+
+.inp_st_text{width:100%}
+.inp_st_text_s{width:100%; max-width:50px;}
+.inp_st_text_m{width:100%; max-width:110px;}
+.inp_st_text_l{width:100%; max-width:200px;}
+
+.inp_st_sel_s{width:100%; max-width:60px;}
+.inp_st_sel_sm{width:100%; max-width:70px;}
+.inp_st_sel_m{width:100%; max-width:110px;}
+.inp_st_sel_L{width:100%; max-width:200px;}
+
+.sel_style_100{width:100%}
+.cal_sm{width:50px}
+
+
+
+/*text 앞 아이콘*/
+.ic{width:15px; height:15px; margin:0 3px; display:inline-block;}
+.ic_tip{background: url('../image/ic_tip_info.png'); background-size: 15px 15px; background-repeat: no-repeat; cursor: pointer;}
+
+.inp::before{content:''; display: inline-block; background-image:url('../image/ic_tip_warning.png'); margin-right:5px; width: 15px; height:15px; background-size: 15px 15px;}
+.tif:before{content:''; display: inline-block;background-image:url('../image/ic_tip_warning.png'); margin-right:5px; width: 15px; height:15px; background-size: 15px 15px;}
+
+.ref::before{content:''; display: inline-block;background-image:url('../image/ic_tip_warning.png'); margin-right:5px; width: 15px; height:15px; background-size: 15px 15px;}
+.cate::before{content:'-';}
+.pt::after{content:'*'; color:var(--Fwarning-color)}
+
+
+
+/**************************
+workOneDetail.jsp 
+css 작업 end
+**************************/
+
+
+
+
+
