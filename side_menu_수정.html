@@ -90,8 +90,26 @@
             </div>
            
             <div class="menu_list_area" id="side_menu">
+                
 
-                <!-- 형제요소로 하여 메뉴 제작 -->
+                <!-- 
+                    같은라인 드롭다운메뉴
+                    
+                    [드롭다운 메뉴]
+                    1. step 클래스에 dropmenu 클래스 추가
+
+                    [포커스방법]
+                    1.포커스방법 step~ 클래스에 active 추가
+
+                    [드롭다운 포커스]
+                    1. step1클래스 있는곳에 class="dropmenu show", id="menu1" 추가
+                    2. step2클래스에는 data-menuId-dep2="menu1" 추가해서 연결
+                    3. step2클래스에 active 추가
+
+                    [depth 누적 연결방법]
+                    1. 아래 퍼블처럼 data-menuId-dep2, data-menuId-dep3, data-menuId-dep4... 누적해가면서 data속성을 부과하여 하위레벨요소 체크해여 slide 
+
+                -->
                 <div class="slide_menu">
                     <div class="step1 active"><a href="#">1depth</a></div>
                     <div class="step1"><a href="#">1depth</a></div>
@@ -108,20 +126,29 @@
                       <div class="step4 dropmenu" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
                        data-menuId-dep4="menu1_3_1" id="menu1_3_1_1"><a href="#" >4depth</a></div>
                       <!-- 5depth-->
-                      <div class="step5" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
-                       data-menuId-dep4="menu1_3_1" data-menuId-dep5="menu1_3_1_1"><a href="#" >5depth</a></div>
+                      <div class="step5 dropmenu" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
+                       data-menuId-dep4="menu1_3_1" data-menuId-dep5="menu1_3_1_1" id="menu1_3_1_1_1"><a href="#" >5depth</a></div>
+                       <!-- 6depth-->
+                      <div class="step6" data-menuId-dep2="menu1" data-menuId-dep3="menu1_3"
+                      data-menuId-dep4="menu1_3_1"  data-menuId-dep5="menu1_3_1_1"
+                      data-menuId-dep6="menu1_3_1_1_1"><a href="#" >6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth6depth</a></div>
                     
                     <div class="step1 dropmenu" id="menu2"><a href="#">1depth</a></div>
-                    <div class="step2" data-menuId-dep2="menu2"><a href="#" >2depth</a></div>
+                    <div class="step2 active" data-menuId-dep2="menu2"><a href="#" >2depth</a></div>
                     <div class="step2" data-menuId-dep2="menu2"><a href="#">2depth</a></div>
                 
                   </div>
                   
                   <script>
                     
-                    /* 형제요소 depth5 드롭다운 메뉴 */
+                    
                     
  $(document).ready(function() {
+
+    /***********************************
+   * 사이드메뉴 드롭다운 스크립트
+   * *********************************/
+
   $('.dropmenu').click(function() {
     const menuId = $(this).attr('id');
     const classList = $(this).attr('class').split(/\s+/);
@@ -134,7 +161,7 @@
       }
     }
 
-    // 다음 레벨의 타겟 엘리먼트 선택
+    // 다음 레벨 step의 속성 선택
     let targetElement = $('.step' + (menuLevel + 1) + '[data-menuId-dep' + (menuLevel + 1) + '="' + menuId + '"]');
 
     // show클래스 여부로 열고 닫음 파악
@@ -148,7 +175,7 @@
       targetElement.slideUp();
     }
 
-    // 하위 step 속성값 확인후 닫기
+    // 다음 레벨 step 속성값 확인후 닫기
     for (let i = menuLevel; i >= 1; i--) {
       const targetSubMenu = $('div[data-menuId-dep' + (i + 1) + '="' + menuId + '"]');
       if (!$(this).hasClass('show') && menuLevel === i) {
@@ -157,7 +184,26 @@
       }
     }
   });
+
+  /***********************************
+   * 메뉴 글자수 제한 스크립트
+   * *********************************/
+  let maxLength =  14; /*글자 제한숫자*/
+  const menuName = $('.slide_menu div[class^="step"] > a');
+  menuName.each(function(){
+    let myStr = $(this).text();
+    if($.trim(myStr).length > maxLength){
+        let newStr = myStr.substring(0,maxLength)+"...";
+        $(this).text(newStr);
+    }
+
+  });
+  
+
+
 });
+
+
 
 
 /* $(document).ready(function() {

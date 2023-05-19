@@ -536,48 +536,155 @@ css 작업 end
 
 
 
-  /* 왼쪽 드롭다운 메뉴 css*/
-
-  .slide_menu div[class^="step"] { height: 50px; line-height: 50px; color: var(--Fmain-color); width: 100%; text-align: left; border: 0px; background-color: var(--sideMenuBg-color); font-size: 16px; font-weight: 500; padding: 0 10px;  }
-
-  .slide_menu .step1{ display: flex; }
-
-  .slide_menu div[class^="step"]:hover {
-    background-color: var(--TtitleBg-color);
-    border-radius: 8px;
-  }
-
-  .slide_menu div[class^="step"]:hover a,.slide_menu div[class^="step"] a  { text-decoration: none; color: var(--Fmain-color); max-width: 210px; width: 100%; display: inline-block; color: var(--Fmain-color); text-decoration: none; align-items: center; vertical-align: middle; }
-
-  .slide_menu div[class^="step"].active {
-    color: var(--whiteFont-color);
-    text-decoration: none;
-    background-color: var(--main-color);
-    border-radius: 8px;
-  }
-  .slide_menu div[class^="step"].active a{color:#ffffff;}
-  .slide_menu div[class^="step"].show a..slide_menu div[class^="step"].show:hover a { color: var(--main-color); font-weight: bold; }
-  .slide_menu div[class^="step"]:not(.step1) > a::before{
-    content: url('../images/folder_ic_spot_nor.png');
-    margin:auto;
-    margin-right: 10px;
-  }
-  .slide_menu div[class^="step"]:not(.step1).active > a::before{ content: url('../images/folder_ic_spot_pre.png'); }
 
 
 
-  .step1::before {
-    content: url('../images/ic_smenu.png');
-    margin-right: 12px;
-  }
-  .step1.active::before {
+/*새로운 스타일 */
+
+.slide_menu{}
+.slide_menu .step1{
+  height: 50px;
+  line-height: 50px;
+  color: var(--Fmain-color);
+  width: 100%;
+  text-align: left;
+  border: 0px;
+  background-color: var(--sideMenuBg-color);
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.slide_menu .step1::before {
+  content: url(../images/ic_smenu.png);
+  margin-right: 12px;
+}
+
+
+.slide_menu .step1::before {
+  content: url(../images/ic_smenu.png);
+  margin-right: 12px;
+}
+
+.slide_menu .step1:hover {
+  background-color: var(--TtitleBg-color);
+  border-radius: 8px;
+}
+.slide_menu .step1:hover a,.slide_menu .step1 a  {
+  text-decoration: none;
+  color:var(--Fmain-color);
+}
+
+.slide_menu .step1.active {
+  color: var(--whiteFont-color);
+  text-decoration: none;
+  background-color: var(--main-color);
+  border-radius: 8px;
+}
+.slide_menu .step1.active a{color:#ffffff;}
+
+.slide_menu .step1.active::before {
     content: url('../images/ic_smenu_active.png');
-  }
+}
 
-  .step2 a::before{margin-left:10px}
-  .step3 a::before{margin-left:20px}
-  .step4 a::before{margin-left:30px}
-  .step5 a::before{margin-left:40px}
-  .step6 a::before{margin-left:50px}
 
-  /*왼쪽드롭다운메뉴 끝 */
+
+
+.step1.show a, .step1.show:hover a{
+  color: var(--main-color);
+font-weight: bold;
+}
+.step1.show, .step1.show:hover {
+}
+.step1 > a {
+  max-width: 210px;
+  width: 100%;
+  display: inline-block;
+  color: var(--Fmain-color);
+  text-decoration: none;
+}
+.step1.dropmenu::after {
+  content: url(../images/ic_arrow_down.png);
+  transition: all 0.2s ease-in;
+}
+.step1.show::after, .step1.active::after {
+    transform: rotate(-180deg);
+}
+
+.step2 {
+  display: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 8px;
+
+    margin-left
+}
+
+.step2 > a{ color:var(--Fmain-color); padding:0 10px }
+.step2.active > a{     width: 100%;
+  color: var(--whiteFont-color);
+  text-decoration: none;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 8px;
+}
+
+
+.step2:hover > a, .step2.active > a { width: 100%; color: var(--whiteFont-color); text-decoration: none; background-color: var(--main-color); display: inline-block; border-radius: 8px; }
+.step2 > a::before{ content: url(../images/sub_list_icon_off.png);
+  margin-right: 10px; }
+.step2:hover > a::before, .step2.active > a::before{ content: url(../images/sub_list_icon_on.png);
+  margin-right: 10px; }
+
+  
+.step3  { display: none; width: 100%; height: 40px; line-height: 40px; padding: 0 8px; }
+.step3 > a{ color:var(--Fmain-color); padding:0 10px }
+.step3:hover > a, .step3.active > a { width: 100%; color: var(--whiteFont-color); text-decoration: none; background-color: var(--main-color); display: inline-block; border-radius: 8px; }
+.step3 > a::before{ content: url(../images/sub_list_icon_off.png);
+  margin-right: 10px; margin-left: 10px; }
+.step3:hover > a::before, .step3.active > a::before{ content: url(../images/sub_list_icon_on.png);
+  margin-right: 10px; }
+
+.step4  { display: none; width: 100%; height: 40px; line-height: 40px; padding: 0 8px; }
+.step4 > a{ color:var(--Fmain-color); padding:0 10px }
+.step4:hover > a, .step4.active > a { width: 100%; color: var(--whiteFont-color); text-decoration: none; background-color: var(--main-color); display: inline-block; border-radius: 8px; }
+.step4 > a::before{ content: url(../images/sub_list_icon_off.png);
+  margin-right: 10px; margin-left: 20px; }
+.step4:hover > a::before, .step4.active > a::before{ content: url(../images/sub_list_icon_on.png);
+  margin-right: 10px; }
+
+  .step5  { display: none; width: 100%; height: 40px; line-height: 40px; padding: 0 8px;  }
+.step5 > a{ color:var(--Fmain-color); padding:0 10px }
+.step5:hover > a, .step5.active > a { width: 100%; color: var(--whiteFont-color); text-decoration: none; background-color: var(--main-color); display: inline-block; border-radius: 8px; }
+.step5 > a::before{ content: url(../images/sub_list_icon_off.png);
+  margin-right: 10px; margin-left: 30px; }
+.step5:hover > a::before, .step5.active > a::before{ content: url(../images/sub_list_icon_on.png);
+  margin-right: 10px; }
+
+  .step6  { display: none; width: 100%; height: 40px; line-height: 40px; padding: 0 8px;  }
+  .step6 > a{ color:var(--Fmain-color); padding:0 10px }
+  .step6:hover > a, .step5.active > a { width: 100%; color: var(--whiteFont-color); text-decoration: none; background-color: var(--main-color); display: inline-block; border-radius: 8px; }
+  .step6 > a::before{ content: url(../images/sub_list_icon_off.png);
+    margin-right: 10px; margin-left: 40px; }
+  .step6:hover > a::before, .step6.active > a::before{ content: url(../images/sub_list_icon_on.png);
+    margin-right: 10px; }
+  
+  
+
+
+
+    .slide_menu div[class^="step"]{
+      height: 50px;
+      line-height: 50px;
+      color: var(--Fmain-color);
+      width: 100%;
+      text-align: left;
+      border: 0px;
+      background-color: var(--sideMenuBg-color);
+      display: flex;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0 10px;
+    }
